@@ -334,3 +334,145 @@ grid-row: 3/-3;
     font-weight:bolder;
     text-align: right;
 }
+/* Media query*/
+
+@media screen and (max-width:768px){
+    :root{
+        --height-shape:14em;
+    }
+    .hero__container{
+       --padding-container: 60px 0;
+       grid-template-columns: 1fr;
+       grid-template-rows: 2fr 1fr;
+       
+    }
+    .card__img{
+        width: 50%;
+        height: 50%;
+    }
+    .hero__img{
+        order: -1;
+        height: 95%;
+    }
+    .hero__title{
+        font-size: 3.8rem;
+
+    }
+    /* About*/
+
+    .about{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        gap: 80px ;
+
+    }
+    .about__course{
+        width: 100%;
+    }
+    .about__picture{
+        order: -1;
+    }
+.about__img{
+   width: 100%;
+}
+
+/* Card*/
+.card__container{
+  
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8,1fr);
+    gap: 15px;
+    grid-template-areas: 
+    "card1 "
+    "card1" 
+    "card2"
+    "card2"
+    "card3"
+    "card3"
+    "card4"
+    "card4";
+}
+
+/*course*/
+
+.course{
+
+    grid-template-columns: repeat (6, 1fr);
+
+}
+.course__about{
+    grid-column: 1/4;
+
+}
+.course__about--left{
+    grid-column: 4/-1;
+}
+
+.course__picture{
+    grid-column: 4/-1;
+}
+.course__picture--right{
+grid-column: 1/6;
+}
+
+/*Footer*/
+
+.footer__contact{
+grid-template-columns: 1fr;
+}
+.footer__texts{
+    order: 1;
+   --align-title: center;
+}
+footer__social{
+    justify-content: space-evenly;
+}
+
+
+}
+
+@media screen and (max-width: 500px){
+    :root{
+        --padding-btn: 20px 0;
+    }
+    .hero__container{
+        --padding-container: 45px 0;
+    }
+    .hero__texts{
+        text-align: center;
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .hero__cta{
+        display: block;
+    }
+    .instructor{
+        --padding-container:60px 0;
+    }
+    .instructor__container{
+        width: 90%;
+    }
+
+    /*About*/
+    .about{
+        gap: 40px;
+       
+       }
+    .about__course{
+        width: 100%;
+    }
+
+    /* Card*/
+    .card__container{
+        width: 97%;
+        grid-template-columns: 1fr;
+        grid-area:
+        "card1"
+        "card2"
+        "card3"
+        "card4";
+    }
+
+
+}
